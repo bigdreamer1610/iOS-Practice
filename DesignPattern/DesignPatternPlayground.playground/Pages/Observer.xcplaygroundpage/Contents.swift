@@ -78,3 +78,4 @@ door.doCommon()
 
 door.detach(observer: backDoor)
 door.doCommon()
+
