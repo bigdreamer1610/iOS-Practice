@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,12 +13,15 @@
 		5E000D3F265E99CF0077A667 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E000D3E265E99CF0077A667 /* AddNewViewController.swift */; };
 		5E000D42265E9D560077A667 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E000D41265E9D560077A667 /* AppRouter.swift */; };
 		5E000D45265E9EEF0077A667 /* DatabaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E000D44265E9EEF0077A667 /* DatabaseConstants.swift */; };
+		5E780208266145B600297B40 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5E780207266145B600297B40 /* Realm */; };
+		5E78020A266145B600297B40 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5E780209266145B600297B40 /* RealmSwift */; };
 		5EAF4C02265D5E1500038440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF4C01265D5E1500038440 /* AppDelegate.swift */; };
 		5EAF4C04265D5E1500038440 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF4C03265D5E1500038440 /* SceneDelegate.swift */; };
 		5EAF4C06265D5E1500038440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EAF4C05265D5E1500038440 /* ViewController.swift */; };
 		5EAF4C09265D5E1500038440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF4C07265D5E1500038440 /* Main.storyboard */; };
 		5EAF4C0B265D5E1600038440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF4C0A265D5E1600038440 /* Assets.xcassets */; };
 		5EAF4C0E265D5E1600038440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EAF4C0C265D5E1600038440 /* LaunchScreen.storyboard */; };
+		5EE2F6642661437D0066DB5C /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE2F6632661437D0066DB5C /* DisplayViewController.swift */; };
 		DEB346CB1ACDB0DCA3522445 /* Pods_SQLiteDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2773D167D4AF81CF596D130B /* Pods_SQLiteDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,7 @@
 		5EAF4C0A265D5E1600038440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EAF4C0D265D5E1600038440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EAF4C0F265D5E1600038440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE2F6632661437D0066DB5C /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		6ABEA48612FFFB63C5695609 /* Pods-SQLiteDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteDemo.debug.xcconfig"; path = "Target Support Files/Pods-SQLiteDemo/Pods-SQLiteDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C1BB4CC5E088E89B6D6FDEA4 /* Pods-SQLiteDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteDemo.release.xcconfig"; path = "Target Support Files/Pods-SQLiteDemo/Pods-SQLiteDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78020A266145B600297B40 /* RealmSwift in Frameworks */,
+				5E780208266145B600297B40 /* Realm in Frameworks */,
 				DEB346CB1ACDB0DCA3522445 /* Pods_SQLiteDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,10 +63,8 @@
 		5E000D37265E99640077A667 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5E000D38265E99700077A667 /* MenuViewController.swift */,
-				5E000D3A265E99790077A667 /* ListViewController.swift */,
-				5E000D3C265E99820077A667 /* DeleteViewController.swift */,
-				5E000D3E265E99CF0077A667 /* AddNewViewController.swift */,
+				5EE2F662266142B20066DB5C /* Realm */,
+				5EE2F661266142A90066DB5C /* SQLite */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -116,6 +120,25 @@
 			path = SQLiteDemo;
 			sourceTree = "<group>";
 		};
+		5EE2F661266142A90066DB5C /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				5E000D3E265E99CF0077A667 /* AddNewViewController.swift */,
+				5E000D3C265E99820077A667 /* DeleteViewController.swift */,
+				5E000D3A265E99790077A667 /* ListViewController.swift */,
+				5E000D38265E99700077A667 /* MenuViewController.swift */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		5EE2F662266142B20066DB5C /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				5EE2F6632661437D0066DB5C /* DisplayViewController.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		64CB24AC5F2787A48DEB3C0B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +174,10 @@
 			dependencies = (
 			);
 			name = SQLiteDemo;
+			packageProductDependencies = (
+				5E780207266145B600297B40 /* Realm */,
+				5E780209266145B600297B40 /* RealmSwift */,
+			);
 			productName = SQLiteDemo;
 			productReference = 5EAF4BFE265D5E1500038440 /* SQLiteDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +205,9 @@
 				Base,
 			);
 			mainGroup = 5EAF4BF5265D5E1500038440;
+			packageReferences = (
+				5E780206266145B600297B40 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 5EAF4BFF265D5E1500038440 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,6 +282,7 @@
 				5EAF4C02265D5E1500038440 /* AppDelegate.swift in Sources */,
 				5EAF4C04265D5E1500038440 /* SceneDelegate.swift in Sources */,
 				5E000D42265E9D560077A667 /* AppRouter.swift in Sources */,
+				5EE2F6642661437D0066DB5C /* DisplayViewController.swift in Sources */,
 				5E000D45265E9EEF0077A667 /* DatabaseConstants.swift in Sources */,
 				5E000D3B265E99790077A667 /* ListViewController.swift in Sources */,
 				5E000D3F265E99CF0077A667 /* AddNewViewController.swift in Sources */,
@@ -459,6 +490,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E780206266145B600297B40 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E780207266145B600297B40 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E780206266145B600297B40 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		5E780209266145B600297B40 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E780206266145B600297B40 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5EAF4BF6265D5E1500038440 /* Project object */;
 }
